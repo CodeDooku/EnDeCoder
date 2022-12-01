@@ -9,69 +9,42 @@ public class Main {
         System.out.println();
         System.out.println("The result:");
 
-
         stringArray(input);
-
-
-        /*
-        for (int i = 0; i < inputArray.length; i++) {
-            System.out.println(inputArray[i] + " = " +
-                    String.format("%7s", Integer.toBinaryString(input.charAt(i))).replace(" ", "0"));
-        }
-         */
-
-
     }
     public static void stringArray(String inputToEncodeDecode){
 
-
-        System.out.println("//testing inputStringToEnDe");
-        for (int i = 0; i < inputToEncodeDecode.length(); i++) {
-            System.out.println(inputToEncodeDecode.charAt(i));
-        }
-
+        //for binaryCode of the input
         StringBuilder binaryInput = new StringBuilder();
+        //for Chuck Norris code
         StringBuilder enCodedString = new StringBuilder();
-        char now;
-        char next;
-        int counter = 0;
-        /* TESTER
-        System.out.println("to Test string array to char array");
+
+        //changes String input to char[] inputArray
         char[] toBinary = inputToEncodeDecode.toCharArray();
-        for (char c : toBinary) {
-            System.out.println(c);
-        }
-         */
-        char[] toBinary = inputToEncodeDecode.toCharArray();
+        //changes char[] inputArray to String binaryCode
         for (char c : toBinary) {
             binaryInput.append(String.format("%7s", Integer.toBinaryString(c)).replace(" ", "0"));
         }
-        System.out.println("//binaryInput");
-        System.out.println(binaryInput);
 
-        for (int i = 0; i < binaryInput.length() - 1; i++) {
-            System.out.println("//test char at");
-            System.out.println(binaryInput.charAt(i));
-            if (binaryInput.charAt(i) == 0) {
+        //to make everything to 0
+        for (int i = 0; i < binaryInput.length(); i++) {
+            //to see if it's 0 or 1
+            //remember:
+            //00 == 0
+            //0  == 1
+            if (binaryInput.charAt(i) == '0') {
                 enCodedString.append("00 ");
-                System.out.println("//00");
-            } else if (binaryInput.charAt(i) == 1) {
+            } else if (binaryInput.charAt(i) == '1') {
                 enCodedString.append("0 ");
-                System.out.println("//0");
             }
-
-            do {
-                now = binaryInput.charAt(i);
-                next = binaryInput.charAt(i + 1);
-                enCodedString.append("0");
+            //should be obvious if reader is sober
+            int count = 1;
+            while (i + 1 < binaryInput.length() && binaryInput.charAt(i) == binaryInput.charAt(i + 1)) {
                 i++;
-            } while (now == next);
-
+                count++;
+            }
+            enCodedString.append("0".repeat(Math.max(0, count)));
             enCodedString.append(" ");
         }
-
-
-        System.out.println("test");
         System.out.println(enCodedString);
     }
 }

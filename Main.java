@@ -36,7 +36,7 @@ public class Main {
             } else if (binaryInput.charAt(i) == '1') {
                 enCodedString.append("0 ");
             }
-            //should be obvious if reader is sober
+            //should be obvious if you are sober
             int count = 1;
             while (i + 1 < binaryInput.length() && binaryInput.charAt(i) == binaryInput.charAt(i + 1)) {
                 i++;

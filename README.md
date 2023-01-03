@@ -1,6 +1,8 @@
 # EnDeCoder
 A: *get's a test-message with a secret*
+
 B: *see's the message* "OMG what a super embarassing message about your friend... I'm gonna tell everyone about it!"
+
 A: "Oh noooooo. Now people think I'm dumb and I can't keep a secret."
 
 DON'T LET THIS HAPPEN TO YOU

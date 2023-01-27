@@ -17,7 +17,7 @@ Normal people use 0 and 1 for binary but Cuck Norris only uses 0
 
 Let me explain:
 
-first your test will be encoded to binary
+first your text will be encoded to binary
 
 after that we will use zeros to determine the following series of numbers
 

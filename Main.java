@@ -63,7 +63,6 @@ public class Main {
                 enCodedString.append("0 ");
             }
             //should be obvious if you are sober
-            //change comment before posting
             int count = 1;
             while (i + 1 < binaryInput.length() && binaryInput.charAt(i) == binaryInput.charAt(i + 1)) {
                 i++;

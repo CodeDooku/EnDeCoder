@@ -13,7 +13,7 @@ This program encodes every latin text to a binary-code
 
 BUT WAIT THERE'S MORE
 
-Normal people use 0 and 1 for binary but Cuck Norris only uses 0
+Normal people use 0 and 1 for binary but Chuck Norris only uses 0
 
 Let me explain:
 
